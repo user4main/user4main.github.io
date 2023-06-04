@@ -10,29 +10,23 @@
 	<link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" href="/favicon.ico" />
 	<link rel="icon" type="image/x-icon" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" href="/favicon.ico" />
 	<link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
-	
     <script onload="redirectToNextPage()">
       function redirectToPage(page) {
         window.location.href = page;
       }
-      
       function redirectWithTimeout(page, timeout) {
         setTimeout(function() {
           redirectToPage(page);
         }, timeout);
       }
-      
       function redirectToNextPage() {
         var pages = [
           "http://$IPADDRESS$:545/",
           "http://192.168.1.2/",
           "http://192.168.2.2/"
         ];
-        
         var currentIndex = 0;
-        
         redirectToPage(pages[currentIndex]);
-        
         setTimeout(function() {
           if (window.location.href !== pages[currentIndex]) {
             currentIndex++;
