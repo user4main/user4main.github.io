@@ -1,9 +1,6 @@
 <DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=http://5.76.56.55:545/">
-    <meta http-equiv="refresh" content="4; url=http://192.168.1.2/">
-    <meta http-equiv="refresh" content="8; url=http://192.168.2.2/">
     <meta charset="utf-8">
     <title>user4main</title>
     <link rel="icon" href="/favicon.ico" />
@@ -13,6 +10,39 @@
 	<link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" href="/favicon.ico" />
 	<link rel="icon" type="image/x-icon" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" href="/favicon.ico" />
 	<link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+ECHO is off.
+    <script onload="redirectToNextPage()">
+      function redirectToPage(page) {
+        window.location.href = page;
+      }
+ECHO is off.
+      function redirectWithTimeout(page, timeout) {
+        setTimeout(function() {
+          redirectToPage(page);
+        }, timeout);
+      }
+ECHO is off.
+      function redirectToNextPage() {
+        var pages = [
+          "http://5.76.56.55:545/",
+          "http://192.168.1.2/",
+          "http://192.168.2.2/"
+        ];
+ECHO is off.
+        var currentIndex = 0;
+ECHO is off.
+        redirectToPage(pages[currentIndex]);
+ECHO is off.
+        setTimeout(function() {
+          if (window.location.href == pages[currentIndex]) {
+            currentIndex++;
+            if (currentIndex < pages.length) {
+              redirectToPage(pages[currentIndex]);
+            }
+          }
+        }, 3000);
+      }
+    </script>
   </head>
   <body>
     <h1><a href="https://user4main.github.io/">user4main</a></h1>
@@ -22,6 +52,6 @@
     </ul>
     <a href="https://github.com/user4main/user4main.github.io/edit/main/index.html">Edit</a>
     <br>
-    <small>Update time: 04.06.2023 19:33:41</small>
+    <small>Update time: 04.06.2023 19:48:23</small>
   </body>
 </html>
